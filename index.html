@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de" ng-app="sponsormapapp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="bower_components/ui-leaflet/dist/ui-leaflet.min.js"></script>
+    <script src="bower_components/Leaflet.label/dist/leaflet.label.js"></script>
+    <script src="bower_components/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="bower_components/Leaflet.label/dist/leaflet.label.css" />
+    <link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <style> .leaflet-container a {color:black;}</style>
+    <script>
+        var app = angular.module("sponsormapapp", ['ui-leaflet']);
+
+        app.controller('MainCtrl', [ '$scope', function($scope) {
+
+            angular.extend($scope, {
+                centralgermany: {
+                    lat: 51.163375,
+                    lng: 10.447683,
+                    zoom: 8
+                },
+
+                markers: {
+
+                    s1: {
+                        group: 'sprossbox',
+                        lat:51.059,  
+                        lng: 13.773,
+                        label: {
+				message: "<a href='http://heimgruen.de'>A linked sponsor</a>",
+                            options: {
+                                noHide: true
+                            }
+                        }
+                    },
+
+                    s2: {
+                        group: 'sprossbox',
+                        lat: 51.062,
+                        lng: 13.752,
+                        label: {
+                            message: "An unlinked sponsor",
+                            options: {
+                                noHide: true
+                            }
+                        }
+                    }
+                },
+            });
+        } ]);
+    </script>
+</head>
+<body ng-controller="MainCtrl">
+    <leaflet lf-center="centralgermany" markers="markers" height="100vh" width="100vw"></leaflet>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.py~
+*.html~
+bower_components/
+
+# C extensions
+*.so
+
+# VI swap extension
+*.swp
