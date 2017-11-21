@@ -20,6 +20,8 @@
 
         app.controller('MainCtrl', [ '$scope', function($scope) {
 
+	    var sprossbox_icon = { iconUrl:'sprossbox-icon.png'}
+
             angular.extend($scope, {
                 centralgermany: {
                     lat: 51.163375,
@@ -38,7 +40,8 @@
                             options: {
                                 noHide: true
                             }
-                        }
+                        },
+			icon: sprossbox_icon
                     },
 
                     s2: {
@@ -50,7 +53,8 @@
                             options: {
                                 noHide: true
                             }
-                        }
+                        },
+			icon: sprossbox_icon
                     }
                 },
             });
