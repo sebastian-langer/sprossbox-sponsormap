@@ -14,13 +14,18 @@
     <link rel="stylesheet" href="bower_components/Leaflet.label/dist/leaflet.label.css" />
     <link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css" />
-    <style> .leaflet-container a {color:black;}</style>
-    <script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <style>
+	.leaflet-container {font-family: "Roboto",Helvetica, Arial, sans-serif !important;}
+	.leaflet-container a {color:black;}
+    </style>
+    <script> 
+	WebFont.load({ google: {families: ['Roboto']} });
         var app = angular.module("sponsormapapp", ['ui-leaflet']);
 
         app.controller('MainCtrl', [ '$scope', function($scope) {
 
-	    var sprossbox_icon = { iconUrl:'sprossbox-icon.png',iconAnchor:[12,44],popupAnchor:[30,23]}
+	    var sprossbox_icon = { iconUrl:'sprossbox-icon.png',iconAnchor:[25,88],popupAnchor:[60,0]}
 
             angular.extend($scope, {
                 centralgermany: {
