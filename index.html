@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
     <style>
-	.leaflet-label {top: -65px; left: 25px; font-family: "Roboto",Helvetica, Arial, sans-serif !important;}
-	.leaflet-label a {color:black;}
+	.leaflet-label {top: -65px; left: 25px; font-family: "Roboto",Helvetica, Arial, sans-serif !important;background: white; border-radius: 10px; font-size: 14px;}
+	.leaflet-label a {text-decoration: none; color:black; font-size: 12px;}
     </style>
     <script> 
 	WebFont.load({ google: {families: ['Roboto']} });
@@ -42,7 +42,7 @@
                         lat:51.059,  
                         lng: 13.773,
                         label: {
-				message: "heimgruen<br><a href='http://heimgruen.de'>A linked sponsor</a>",
+				message: "heimgruen<br><a href='https://www.heimgruen.de'>www.heimgruen.de</a>",
                             options: {
                                 noHide: true
                             }
