@@ -29,6 +29,9 @@
 	    var sprossbox_icon = { iconUrl:'sprossbox-icon.png',iconAnchor:[25,88],popupAnchor:[60,0]}
 
             angular.extend($scope, {
+		defaults: {
+			       scrollWheelZoom: false
+			   },
                 centralgermany: {
                     lat: 51.163375,
                     lng: 10.447683,
@@ -133,6 +136,6 @@
     </script>
 </head>
 <body ng-controller="MainCtrl">
-    <leaflet lf-center="centralgermany" markers="markers" height="100vh" width="100vw" style="position:fixed;top:0;left:0"></leaflet>
+    <leaflet lf-center="centralgermany" defaults="defaults" markers="markers" height="100vh" width="100vw" style="position:fixed;top:0;left:0"></leaflet>
 </body>
 </html>
